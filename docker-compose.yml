@@ -2,8 +2,8 @@ version: '3'
 
 services:
   db:
-    image: postgres:14
-    container_name: my-db
+    image: postgres:latest
+    container_name: my-db_ST
     ports:
       - 54321:5432
     environment:
@@ -19,7 +19,7 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
   strapi:
-    image: naskio/strapi:latest
+    image: metha/myapp
     container_name: strapi
     ports:
       - 1337:1337
